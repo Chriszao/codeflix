@@ -33,4 +33,6 @@ RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/
     -a 'CASE_SENSITIVE="true"' \
     -a 'alias py="python3"'
 
+RUN echo 'HISTFILE=/home/python/zsh/.zsh_history' >> ~/.zshrc
+
 CMD [ "tail", "-f", "/dev/null" ]
